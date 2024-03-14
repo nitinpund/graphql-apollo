@@ -1,0 +1,21 @@
+# get the list of Authors
+
+query AuthorQuery {
+    authors {
+    id
+    name
+    verified
+  }
+}
+++++++++++++++++++++++++++++++++++++
+
+#get the authors object using ID
+
+query AuthorQuery($id:ID!) {
+  author(id:$id) {
+    id
+    name
+    verified
+  }
+}
+

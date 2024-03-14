@@ -1,0 +1,21 @@
+# get the list of Games
+
+query GamesQuery {
+  games {
+    id
+    platform
+    title
+  }
+}
+++++++++++++++++++++++++++++++++++++
+
+#get the game object using ID
+
+query GamesQuery($id:ID!) {
+  game(id:$id) {
+    id
+    platform
+    title
+  }
+}
+

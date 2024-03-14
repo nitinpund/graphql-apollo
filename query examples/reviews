@@ -1,0 +1,21 @@
+#get the list of reviews
+
+query Reviews {
+  reviews {
+    id
+    rating
+    content
+  }
+}
+
++++++++++++++++++++++++++++++++++
+
+# get the review object using id
+
+query Reviews($id:ID!) {
+  review(id:$id) {
+    id
+    rating
+    content
+  }
+}
