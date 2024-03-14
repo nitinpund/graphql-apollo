@@ -1,0 +1,21 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# update the properties of existing game using id
+
+### input object
+{
+  "edits": {
+    "title":"dark souls"
+  },
+  "id": "2"
+}
+
++++++++
+mutation EditMutation($edits:EditGameInput!, $id:ID!) {
+  updateGame(edits: $edits, id:$id) {
+    title
+    platform
+  }
+}
+
+++++++++++++++++++++++++++++++++++++++++++

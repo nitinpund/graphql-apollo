@@ -1,0 +1,10 @@
+++++++++++++++++++++++++++++++++++++
+#delete the game
+
+mutation DeleteMutation($id:ID!) {
+  deleteGame(id: $id) {
+    id
+    title
+    platform
+  }
+}

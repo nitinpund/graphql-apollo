@@ -1,0 +1,11 @@
+
+++++++++++++++++++++++++++++++++++++
+# Add new game 
+
+mutation AddMutation($game:AddGameInput!) {
+  addGame(game: $game) {
+    id
+    title
+    platform
+  }
+}
