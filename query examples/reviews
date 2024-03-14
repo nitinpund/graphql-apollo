@@ -19,3 +19,39 @@ query Reviews($id:ID!) {
     content
   }
 }
+
++++++++++++++++++++++++++++++++
+#get the review data along with the associated games and author
+
+query ReviewQuery($id:ID!) {
+  review(id:$id) {
+    id
+    rating
+    game {
+      id
+      title
+      platform
+    }
+    author {
+      id
+      name
+      verified
+    }
+  }
+}
+
+++++++++++++++++++++++++++++++++++++
+#get the review and game associated with the review, then get the reviews for that particular game
+
+query ReviewQuery($id:ID!) {
+  review(id:$id) {
+    rating
+    game {
+      title
+      platform
+      reviews {
+        rating
+      }
+    }
+  }
+}

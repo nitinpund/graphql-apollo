@@ -19,3 +19,18 @@ query GamesQuery($id:ID!) {
   }
 }
 
+++++++++++++++++++++++++++++++++++++++
+
+# get games along with the related reviews
+query GamesQuery($id:ID!) {
+  game(id:$id) {
+    id
+    title
+    reviews {
+      id
+      rating
+      content
+    }
+  }
+}
+
